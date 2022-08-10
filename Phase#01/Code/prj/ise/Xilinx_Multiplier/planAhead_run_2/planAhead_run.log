@@ -1,0 +1,92 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/pa.fromNcd.tcl
+# create_project -name Top -dir "C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/planAhead_run_2" -part xc6vlx240tff1156-1
+# set srcset [get_property srcset [current_run -impl]]
+# set_property design_mode GateLvl $srcset
+# set_property edif_top_file "C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/Top.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier} {ipcore_dir} }
+# add_files [list {ipcore_dir/Multiplier.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "Top.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/Top.ucf' to fileset 'constrs_1'
+# add_files [list {Top.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6vlx240tff1156-1
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design Top.ngc ...
+WARNING:NetListWriters:298 - No output is written to Top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file Top.edif ...
+ngc2edif: Total memory usage is 4325736 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/Top.data/cache/Top_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_2/Top.data/cache/Top_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design Multiplier.ngc ...
+WARNING:NetListWriters:298 - No output is written to Multiplier.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file Multiplier.edif ...
+ngc2edif: Total memory usage is 4325736 kilobytes
+
+Reading core file 'C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/ipcore_dir/Multiplier.ngc' for (cell view 'Multiplier', library 'Top_lib', file 'Top.ngc')
+Parsing EDIF File [./planAhead_run_2/Top.data/cache/Multiplier_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_2/Top.data/cache/Multiplier_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx240t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx240t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/virtex6/ClockPlacerRules.xml
+Loading clock capable ios from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/virtex6/ClockCapableIOBs.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx240t/ff1156/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/virtex6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/virtex6/drc.xml
+Parsing UCF File [C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/ipcore_dir/Multiplier.ncf]
+Finished Parsing UCF File [C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/ipcore_dir/Multiplier.ncf]
+Parsing UCF File [C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/Top.ucf]
+Finished Parsing UCF File [C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/Top.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+
+Phase 0 | Netlist Checksum: eb059e84
+link_design: Time (s): elapsed = 00:00:45 . Memory (MB): peak = 732.488 ; gain = 232.902
+# read_xdl -file "C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/Top.ncd"
+Release 14.7 - xdl P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+WARNING:XDL:213 - The resulting xdl output will not have LUT equation strings or RAM INIT strings.
+Loading device for application Rf_Device from file '6vlx240t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "Top" is an NCD, version 3.2, device xc6vlx240t, package ff1156, speed -1
+Successfully converted design 'C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Top.ncd' to 'C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Top.xdl'.
+INFO: [Designutils 20-669] Parsing Placement File : C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/Top.ncd
+INFO: [Designutils 20-658] Finished Parsing Placement File : C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/Top.ncd
+INFO: [Designutils 20-671] Placed 531 instances
+read_xdl: Time (s): elapsed = 00:00:12 . Memory (MB): peak = 732.488 ; gain = 0.000
+# if {[catch {read_twx -name results_1 -file "C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/Top.twx"} eInfo]} {
+#    puts "WARNING: there was a problem importing \"C:/Users/ASUS/Desktop/CAD/Xilinx_Multiplier/Top.twx\": $eInfo"
+# }
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Dec 22 22:26:08 2020...
+INFO: [Common 17-83] Releasing license: PlanAhead

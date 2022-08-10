@@ -1,0 +1,36 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/ASUS/Desktop/CAD/Self_Multiplier/testbench_isim_beh.exe -prj C:/Users/ASUS/Desktop/CAD/Self_Multiplier/testbench_beh.prj work.testbench work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/ASUS/Desktop/CAD/Self_Multiplier/Two_multiplier.v" into library work
+Analyzing Verilog file "C:/Users/ASUS/Desktop/CAD/Self_Multiplier/Register.v" into library work
+Analyzing Verilog file "C:/Users/ASUS/Desktop/CAD/Self_Multiplier/Multiplier.v" into library work
+Analyzing Verilog file "C:/Users/ASUS/Desktop/CAD/Self_Multiplier/Counter.v" into library work
+Analyzing Verilog file "C:/Users/ASUS/Desktop/CAD/Self_Multiplier/Adder.v" into library work
+Analyzing Verilog file "C:/Users/ASUS/Desktop/CAD/Self_Multiplier/Activation_func.v" into library work
+Analyzing Verilog file "C:/Users/ASUS/Desktop/CAD/Self_Multiplier/Datapath.v" into library work
+Analyzing Verilog file "C:/Users/ASUS/Desktop/CAD/Self_Multiplier/Controller.v" into library work
+Analyzing Verilog file "C:/Users/ASUS/Desktop/CAD/Self_Multiplier/Top.v" into library work
+Analyzing Verilog file "C:/Users/ASUS/Desktop/CAD/Self_Multiplier/testbench.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module Register
+Compiling module Two_Multiplier
+Compiling module Multiplier
+Compiling module adder(WORD_LENGTH=32'sb010001)
+Compiling module Register(WORD_LENGTH=32'sb010001...
+Compiling module Activation_func(WORD_LENGTH=32's...
+Compiling module counter(N=2)
+Compiling module Datapath(N=2)
+Compiling module Controller
+Compiling module Top_default
+Compiling module testbench
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 12 Verilog Units
+Built simulation executable C:/Users/ASUS/Desktop/CAD/Self_Multiplier/testbench_isim_beh.exe
+Fuse Memory Usage: 30168 KB
+Fuse CPU Usage: 437 ms

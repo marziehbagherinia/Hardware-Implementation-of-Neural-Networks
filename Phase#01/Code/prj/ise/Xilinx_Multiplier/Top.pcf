@@ -1,0 +1,40 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Dec 22 22:17:43 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+TIMEGRP clk = BEL "CNT/state_FSM_FFd4" BEL "CNT/state_FSM_FFd5" BEL
+        "CNT/state_FSM_FFd3" BEL "CNT/state_FSM_FFd2" BEL "CNT/state_FSM_FFd1"
+        BEL "DP/cnt/count_1" BEL "DP/cnt/count_0" BEL "DP/vectorWeight/out_7"
+        BEL "DP/vectorWeight/out_6" BEL "DP/vectorWeight/out_5" BEL
+        "DP/vectorWeight/out_4" BEL "DP/vectorWeight/out_3" BEL
+        "DP/vectorWeight/out_2" BEL "DP/vectorWeight/out_1" BEL
+        "DP/vectorWeight/out_0" BEL "DP/vectorInput/out_7" BEL
+        "DP/vectorInput/out_6" BEL "DP/vectorInput/out_5" BEL
+        "DP/vectorInput/out_4" BEL "DP/vectorInput/out_3" BEL
+        "DP/vectorInput/out_2" BEL "DP/vectorInput/out_1" BEL
+        "DP/vectorInput/out_0" BEL "DP/N_bit/out_16" BEL "DP/N_bit/out_15" BEL
+        "DP/N_bit/out_14" BEL "DP/N_bit/out_13" BEL "DP/N_bit/out_12" BEL
+        "DP/N_bit/out_11" BEL "DP/N_bit/out_10" BEL "DP/N_bit/out_9" BEL
+        "DP/N_bit/out_8" BEL "DP/N_bit/out_7" BEL "DP/N_bit/out_6" BEL
+        "DP/N_bit/out_5" BEL "DP/N_bit/out_4" BEL "DP/N_bit/out_3" BEL
+        "DP/N_bit/out_2" BEL "DP/N_bit/out_1" BEL "DP/N_bit/out_0" BEL
+        "clk_BUFGP/BUFG" BEL "DP/multiplier/blk00000001/blk000000d1" BEL
+        "DP/multiplier/blk00000001/blk000000d2" BEL
+        "DP/multiplier/blk00000001/blk000000d3" BEL
+        "DP/multiplier/blk00000001/blk000000d4" BEL
+        "DP/multiplier/blk00000001/blk000000d5" BEL
+        "DP/multiplier/blk00000001/blk000000d6" BEL
+        "DP/multiplier/blk00000001/blk000000d7" BEL
+        "DP/multiplier/blk00000001/blk000000d8" BEL
+        "DP/multiplier/blk00000001/blk000000d9" BEL
+        "DP/multiplier/blk00000001/blk000000da" BEL
+        "DP/multiplier/blk00000001/blk000000db" BEL
+        "DP/multiplier/blk00000001/blk000000dc" BEL
+        "DP/multiplier/blk00000001/blk000000dd" BEL
+        "DP/multiplier/blk00000001/blk000000de" BEL
+        "DP/multiplier/blk00000001/blk000000df" BEL
+        "DP/multiplier/blk00000001/blk000000e0";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+

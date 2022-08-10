@@ -1,0 +1,8 @@
+verilog work "Register.v"
+verilog work "ipcore_dir/Multiplier.v"
+verilog work "Counter.v"
+verilog work "Adder.v"
+verilog work "Activation_func.v"
+verilog work "Datapath.v"
+verilog work "Controller.v"
+verilog work "Top.v"

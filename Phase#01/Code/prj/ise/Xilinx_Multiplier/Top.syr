@@ -1,0 +1,568 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-1-ff1156
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Register.v" into library work
+Parsing module <Register>.
+Analyzing Verilog file "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\ipcore_dir\Multiplier.v" into library work
+Parsing module <Multiplier>.
+Analyzing Verilog file "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Counter.v" into library work
+Parsing module <counter>.
+Analyzing Verilog file "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Adder.v" into library work
+Parsing module <adder>.
+Analyzing Verilog file "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Activation_func.v" into library work
+Parsing module <Activation_func>.
+Analyzing Verilog file "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Datapath.v" into library work
+Parsing module <Datapath>.
+Analyzing Verilog file "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Controller.v" into library work
+Parsing module <Controller>.
+Analyzing Verilog file "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Top.v" into library work
+Parsing module <Top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Top>.
+
+Elaborating module <Datapath(N=2)>.
+
+Elaborating module <Register>.
+
+Elaborating module <Multiplier>.
+
+Elaborating module <adder(WORD_LENGTH=32'sb010001)>.
+
+Elaborating module <Register(WORD_LENGTH=32'sb010001)>.
+
+Elaborating module <Activation_func(WORD_LENGTH=32'sb010001)>.
+
+Elaborating module <counter(N=2)>.
+
+Elaborating module <Controller>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top>.
+    Related source file is "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Top.v".
+        N = 2
+    Summary:
+	no macro.
+Unit <Top> synthesized.
+
+Synthesizing Unit <Datapath>.
+    Related source file is "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Datapath.v".
+        N = 2
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <Datapath> synthesized.
+
+Synthesizing Unit <Register>.
+    Related source file is "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Register.v".
+        WORD_LENGTH = 8
+    Found 8-bit register for signal <out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <Register> synthesized.
+
+Synthesizing Unit <adder>.
+    Related source file is "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Adder.v".
+        WORD_LENGTH = 17
+    Found 16-bit subtractor for signal <GND_5_o_B[15]_sub_4_OUT> created at line 40.
+    Found 16-bit subtractor for signal <B[15]_GND_5_o_sub_5_OUT> created at line 44.
+    Found 16-bit adder for signal <GND_5_o_B[15]_add_1_OUT> created at line 35.
+    Found 1-bit comparator equal for signal <A[15]_B[16]_equal_1_o> created at line 34
+    Found 16-bit comparator greater for signal <B[15]_GND_5_o_LessThan_3_o> created at line 39
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <adder> synthesized.
+
+Synthesizing Unit <Register_1>.
+    Related source file is "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Register.v".
+        WORD_LENGTH = 17
+    Found 17-bit register for signal <out>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <Register_1> synthesized.
+
+Synthesizing Unit <Activation_func>.
+    Related source file is "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Activation_func.v".
+        WORD_LENGTH = 17
+    Found 17-bit register for signal <out>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <Activation_func> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Counter.v".
+        N = 2
+    Found 2-bit register for signal <count>.
+    Found 2-bit adder for signal <count[1]_GND_8_o_add_0_OUT> created at line 40.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <counter> synthesized.
+
+Synthesizing Unit <Controller>.
+    Related source file is "C:\Users\ASUS\Desktop\CAD\Xilinx_Multiplier\Controller.v".
+        S0 = 3'b000
+        S1 = 3'b001
+        S2 = 3'b010
+        S3 = 3'b011
+        S4 = 3'b100
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <Controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 2
+ 2-bit adder                                           : 1
+# Registers                                            : 5
+ 17-bit register                                       : 2
+ 2-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 2
+ 1-bit comparator equal                                : 1
+ 16-bit comparator greater                             : 1
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 3
+ 17-bit 2-to-1 multiplexer                             : 2
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/Multiplier.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <Multiplier> for timing and area information for instance <multiplier>.
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 2
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 50
+ Flip-Flops                                            : 50
+# Comparators                                          : 2
+ 1-bit comparator equal                                : 1
+ 16-bit comparator greater                             : 1
+# Multiplexers                                         : 4
+ 1-bit 2-to-1 multiplexer                              : 2
+ 17-bit 2-to-1 multiplexer                             : 2
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:5]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00001
+ 001   | 00010
+ 010   | 00100
+ 011   | 01000
+ 100   | 10000
+-------------------
+
+Optimizing unit <Register> ...
+
+Optimizing unit <Register_1> ...
+
+Optimizing unit <Top> ...
+
+Optimizing unit <Datapath> ...
+
+Optimizing unit <Activation_func> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 57
+ Flip-Flops                                            : 57
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 440
+#      GND                         : 2
+#      INV                         : 3
+#      LUT1                        : 1
+#      LUT2                        : 83
+#      LUT3                        : 10
+#      LUT4                        : 43
+#      LUT5                        : 19
+#      LUT6                        : 3
+#      MULT_AND                    : 36
+#      MUXCY                       : 118
+#      VCC                         : 2
+#      XORCY                       : 120
+# FlipFlops/Latches                : 73
+#      FD                          : 16
+#      FDC                         : 4
+#      FDCE                        : 35
+#      FDP                         : 1
+#      FDR                         : 17
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 18
+#      OBUF                        : 17
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              56  out of  301440     0%  
+ Number of Slice LUTs:                  162  out of  150720     0%  
+    Number used as Logic:               162  out of  150720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    196
+   Number with an unused Flip Flop:     140  out of    196    71%  
+   Number with an unused LUT:            34  out of    196    17%  
+   Number of fully used LUT-FF pairs:    22  out of    196    11%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          36
+ Number of bonded IOBs:                  36  out of    600     6%  
+    IOB Flip Flops/Latches:              17
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 56    |
+CNT/state_FSM_FFd1                 | NONE(DP/c1/out_16)     | 17    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.099ns (Maximum Frequency: 243.992MHz)
+   Minimum input arrival time before clock: 0.990ns
+   Maximum output required time after clock: 0.777ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.099ns (frequency: 243.992MHz)
+  Total number of paths / destination ports: 84854 / 75
+-------------------------------------------------------------------------
+Delay:               4.099ns (Levels of Logic = 21)
+  Source:            DP/vectorInput/out_0 (FF)
+  Destination:       sec_inst (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: DP/vectorInput/out_0 to sec_inst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             8   0.375   0.684  DP/vectorInput/out_0 (DP/vectorInput/out_0)
+     begin scope: 'DP/multiplier:a<0>'
+     begin scope: 'DP/multiplier/blk00000001:A<0>'
+     SEC:in->out           1   0.068   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.290   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           3   0.239   0.505  sec_inst (sec_net)
+     SEC:in->out           1   0.068   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.290   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           5   0.239   0.518  sec_inst (sec_net)
+     SEC:in->out           1   0.068   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.290   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.239   0.000  sec_inst (sec_net)
+     SEC:in                    0.011          sec_inst
+    ----------------------------------------
+    Total                      4.099ns (2.392ns logic, 1.707ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 58 / 58
+-------------------------------------------------------------------------
+Offset:              0.990ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       CNT/state_FSM_FFd4 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to CNT/state_FSM_FFd4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            40   0.003   0.553  rst_IBUF (rst_IBUF)
+     FDC:CLR                   0.434          CNT/state_FSM_FFd4
+    ----------------------------------------
+    Total                      0.990ns (0.437ns logic, 0.553ns route)
+                                       (44.1% logic, 55.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CNT/state_FSM_FFd1'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              0.777ns (Levels of Logic = 1)
+  Source:            DP/c1/out_16 (FF)
+  Destination:       Res_out<16> (PAD)
+  Source Clock:      CNT/state_FSM_FFd1 rising
+
+  Data Path: DP/c1/out_16 to Res_out<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.375   0.399  DP/c1/out_16 (DP/c1/out_16)
+     OBUF:I->O                 0.003          Res_out_16_OBUF (Res_out<16>)
+    ----------------------------------------
+    Total                      0.777ns (0.378ns logic, 0.399ns route)
+                                       (48.6% logic, 51.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CNT/state_FSM_FFd1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.877|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.099|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.83 secs
+ 
+--> 
+
+Total memory usage is 4494372 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
